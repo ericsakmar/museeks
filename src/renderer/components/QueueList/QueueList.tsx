@@ -82,12 +82,16 @@ const QueueList: React.FC<Props> = (props) => {
 
   return (
     <>
+      {/*
       <div className={styles.queue__header}>
         <div className={styles.queue__header__infos}>{getStatus(incomingQueue)}</div>
+
         <Button bSize='small' onClick={QueueActions.clear}>
           clear queue
         </Button>
       </div>
+        */}
+
       <div className={styles.queue__content}>
         {shownQueue.map((track, index) => (
           <QueueListItem

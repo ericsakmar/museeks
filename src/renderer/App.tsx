@@ -17,6 +17,7 @@ import styles from './App.module.css';
 import { isCtrlKey } from './lib/utils-platform';
 import Player from './lib/player';
 import DropzoneImport from './components/DropzoneImport/DropzoneImport';
+import NowPlaying from './components/NowPlaying/NowPlaying';
 
 /*
 |--------------------------------------------------------------------------
@@ -85,8 +86,8 @@ const Museeks: React.FC<Props> = (props) => {
           });
       },
       collect: (monitor) => ({
-        isOver: monitor.isOver(),
-      }),
+        isOver: monitor.isOver()
+      })
     };
   });
 
@@ -94,8 +95,18 @@ const Museeks: React.FC<Props> = (props) => {
     <div className={`${styles.root} os__${os.platform()}`} ref={drop}>
       <KeyBinding onKey={onKey} preventInputConflict />
       <Header />
-      <main className={styles.mainContent}>{props.children}</main>
-      <Footer />
+
+      <div className={styles.layout}>
+        <div className={styles.newMain}>
+          <main className={styles.mainContent}>{props.children}</main>
+          <Footer />
+        </div>
+
+        <div className={styles.now_playing}>
+          <NowPlaying />
+        </div>
+      </div>
+
       <Toasts />
       <DropzoneImport title='Add music to the library' subtitle='Drop files or folders anywhere' shown={isOver} />
     </div>

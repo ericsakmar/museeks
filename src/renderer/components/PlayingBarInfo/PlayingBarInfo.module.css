@@ -1,12 +1,9 @@
 .playingBar__info {
-  flex: 1 1 auto;
   min-width: 0;
+  width: 100%;
 }
 
 .playingBar__info__metas {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 4px;
 }
 
@@ -16,7 +13,16 @@
   text-overflow: ellipsis;
   overflow: hidden;
   vertical-align: middle;
-  text-align: center;
+  margin-bottom: 10px;
+}
+
+.trackName {
+  font-weight: 200;
+}
+
+.albumInfo {
+  font-weight: 100;
+  opacity: 0.7;
 }
 
 .duration {
@@ -27,6 +33,7 @@
   text-align: right;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
+  font-weight: 200;
 }
 
 .playerOptions {

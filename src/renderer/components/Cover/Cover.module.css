@@ -1,7 +1,6 @@
 .cover {
-  width: 48px;
-  height: 48px;
-  margin-right: 10px;
+  width: 100%;
+  aspect-ratio: 1;
   background-position: center;
   background-size: cover;
   text-align: center;

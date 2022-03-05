@@ -1,9 +1,10 @@
 .volumeControlContainer {
-  position: relative;
+  position: absolute;
+  right: 0;
 }
 
 .volumeControl {
-  background-color: var(--header-bg);
+  background-color: var(--background);
   position: absolute;
   z-index: 10;
   top: -2px;

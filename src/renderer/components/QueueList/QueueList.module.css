@@ -1,6 +1,5 @@
 .queue__header {
   padding: 5px 10px;
-  background-color: var(--queue-header-bg);
 }
 
 .queue__header__infos {
@@ -11,6 +10,5 @@
 }
 
 .queue__content {
-  max-height: 250px;
   overflow: auto;
 }

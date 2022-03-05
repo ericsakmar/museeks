@@ -2,15 +2,35 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  background-color: var(--background);
+}
+
+.layout {
+  display: flex;
+  overflow: auto;
+  flex-grow: 1;
+}
+
+.now_playing {
+  flex: 0 0 350px;
+  width: 350px;
+  background-color: var(--header-bg);
+  padding-bottom: 20px;
+}
+
+.newMain {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .mainContent {
-  width: 100%;
-  flex: 1 1 auto;
+  flex-grow: 1;
   position: relative;
   display: flex;
   flex-direction: column;
   min-height: 0;
+  background-color: var(--background);
 }
 
 .content {

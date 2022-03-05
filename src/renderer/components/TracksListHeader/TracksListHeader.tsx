@@ -46,12 +46,6 @@ class TracksListHeader extends React.Component<Props> {
           icon={TracksListHeader.getIcon(sort, SortBy.TITLE)}
         />
         <TracksListHeaderCell
-          className={styles.cellDuration}
-          title='Duration'
-          sortBy={enableSort ? SortBy.DURATION : null}
-          icon={TracksListHeader.getIcon(sort, SortBy.DURATION)}
-        />
-        <TracksListHeaderCell
           className={styles.cellArtist}
           title='Artist'
           sortBy={enableSort ? SortBy.ARTIST : null}
@@ -63,12 +57,6 @@ class TracksListHeader extends React.Component<Props> {
           sortBy={enableSort ? SortBy.ALBUM : null}
           icon={TracksListHeader.getIcon(sort, SortBy.ALBUM)}
         />
-        <TracksListHeaderCell
-          className={styles.cellGenre}
-          title='Genre'
-          sortBy={enableSort ? SortBy.GENRE : null}
-          icon={TracksListHeader.getIcon(sort, SortBy.GENRE)}
-        />
       </div>
     );
   }
@@ -77,7 +65,7 @@ class TracksListHeader extends React.Component<Props> {
 const mapStateToProps = (state: RootState, ownProps: OwnProps): InjectedProps => {
   if (ownProps.enableSort) {
     return {
-      sort: state.library.sort,
+      sort: state.library.sort
     };
   }
 

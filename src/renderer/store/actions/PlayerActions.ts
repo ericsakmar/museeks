@@ -122,6 +122,27 @@ export const start = async (queue?: TrackModel[], _id?: string): Promise<void> =
   }
 };
 
+export const startAlbum = async (album: string): Promise<void> => {
+  const state = store.getState();
+
+  const newQueue = state.library.tracks.library
+    .filter((t) => t.album === album)
+    .sort((a, b) => a.track.no - b.track.no);
+
+  Player.setTrack(newQueue[0]);
+  await Player.play();
+
+  store.dispatch({
+    type: types.PLAYER_START,
+    payload: {
+      queue: newQueue,
+      queueOrigin: '/library',
+      oldQueue: [...newQueue],
+      queueCursor: 0,
+    },
+  });
+};
+
 /**
  * Toggle play/pause
  */

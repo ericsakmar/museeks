@@ -19,6 +19,7 @@ import DetailsView from './views/Details/Details';
 import { config } from './lib/app';
 import { RootState } from './store/reducers';
 import Playlist from './components/Playlists/Playlist';
+import Home from './views/Home/Home';
 
 const Router: React.FC = () => {
   const library = useSelector((state: RootState) => state.library);
@@ -28,6 +29,7 @@ const Router: React.FC = () => {
     <HistoryRouter history={history}>
       <App>
         <Routes>
+          <Route path='/home' element={<Home />} />
           <Route path='/library' element={<LibraryView />} />
           <Route path='/settings' element={<SettingsView />}>
             <Route path='library' element={<SettingsLibrary library={library} />} />

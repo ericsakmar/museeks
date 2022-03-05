@@ -37,15 +37,15 @@ class Header extends React.Component<Props> {
 
     return (
       <header className={styles.header}>
-        <div className={styles.header__mainControls}>
-          <PlayerControls playerStatus={playerStatus} />
-        </div>
-        <div className={styles.header__playingBar}>
-          <PlayingBar queue={queue} queueCursor={queueCursor} shuffle={shuffle} repeat={repeat} />
-        </div>
+        <div className={styles.header__mainControls}></div>
+        <div className={styles.header__playingBar}></div>
+
+        {/*
         <div className={styles.header__search}>
           <Search />
         </div>
+        <KeyBinding onKey={this.onKey} preventInputConflict />
+        */}
       </header>
     );
   }
@@ -56,7 +56,7 @@ const mapStateToProps = ({ player }: RootState) => ({
   repeat: player.repeat,
   shuffle: player.shuffle,
   queue: player.queue,
-  queueCursor: player.queueCursor,
+  queueCursor: player.queueCursor
 });
 
 export default connect(mapStateToProps)(Header);

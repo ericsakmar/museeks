@@ -30,7 +30,7 @@ export default class VolumeControl extends React.Component<Record<string, undefi
     this.state = {
       showVolume: false,
       volume: unsmoothifyVolume(audio.volume),
-      muted: audio.muted,
+      muted: audio.muted
     };
 
     this.mute = this.mute.bind(this);
@@ -71,12 +71,17 @@ export default class VolumeControl extends React.Component<Record<string, undefi
 
   render() {
     const volumeClasses = cx(styles.volumeControl, {
-      [styles.visible]: this.state.showVolume,
+      [styles.visible]: this.state.showVolume
     });
 
     return (
       <div className={styles.volumeControlContainer} onMouseEnter={this.showVolume} onMouseLeave={this.hideVolume}>
-        <button type='button' className={controlStyles.control} title='Volume' onClick={this.mute}>
+        <button
+          type='button'
+          className={`${controlStyles.control} ${controlStyles.volume}`}
+          title='Volume'
+          onClick={this.mute}
+        >
           <Icon name={this.getVolumeIcon(unsmoothifyVolume(this.state.volume), this.state.muted)} />
         </button>
         <div className={volumeClasses}>

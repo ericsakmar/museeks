@@ -3,8 +3,8 @@
   flex-wrap: nowrap;
   width: 100%;
   position: relative;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   cursor: pointer;
 
   &:not(:last-child) {
@@ -68,7 +68,7 @@
 }
 
 .queue__item__info__title {
-  font-weight: bold;
+  font-weight: 200;
 }
 
 .queue__item__info__title,
@@ -77,4 +77,9 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.queue__item__info__otherInfos {
+  font-weight: 100;
+  opacity: 0.7;
 }

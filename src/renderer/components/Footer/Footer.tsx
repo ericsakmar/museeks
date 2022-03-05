@@ -44,6 +44,16 @@ const Footer: React.FC = () => {
       <div className={styles.footer__navigation}>
         <div className={styles.footer__navigation__linkgroup}>
           <NavLink
+            to='/home'
+            className={({ isActive }) =>
+              `${styles.footer__navigation__link} ${isActive && styles.footer__navigation__linkIsActive}`
+            }
+            title='Albums'
+            draggable={false}
+          >
+            <Icon name='circle' fixedWidth />
+          </NavLink>
+          <NavLink
             to='/library'
             className={({ isActive }) =>
               `${styles.footer__navigation__link} ${isActive && styles.footer__navigation__linkIsActive}`

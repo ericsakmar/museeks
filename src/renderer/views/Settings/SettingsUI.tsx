@@ -44,6 +44,7 @@ const SettingsUI: React.FC<Props> = (props) => {
         <Setting.Select defaultValue={config.theme} onChange={onDefaultViewChange} id='setting-default-view'>
           <option value='library'>Library (default)</option>
           <option value='playlists'>Playlists</option>
+          <option value='home'>Albums</option>
         </Setting.Select>
         <Setting.Description>Change the default view when starting the application</Setting.Description>
       </Setting.Section>

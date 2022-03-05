@@ -5,6 +5,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 24px;
+  font-weight: 100;
 }
 
 .track {

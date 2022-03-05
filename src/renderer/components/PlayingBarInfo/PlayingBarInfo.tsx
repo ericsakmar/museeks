@@ -140,22 +140,24 @@ class PlayingBarInfo extends React.Component<Props, State> {
     return (
       <div className={styles.playingBar__info}>
         <div className={styles.playingBar__info__metas}>
-          <div className={styles.playerOptions}>
-            <ButtonRepeat repeat={this.props.repeat} />
-            <ButtonShuffle shuffle={this.props.shuffle} />
-          </div>
+          {/* maybe move these somewhere else 
+            <div className={styles.playerOptions}>
+              <ButtonRepeat repeat={this.props.repeat} />
+              <ButtonShuffle shuffle={this.props.shuffle} />
+            </div>
+            */}
           <div className={styles.metas}>
-            <strong>{trackPlaying.title}</strong>
-            &nbsp;by&nbsp;
-            <strong>{trackPlaying.artist.join(', ')}</strong>
-            &nbsp;on&nbsp;
-            <strong>{trackPlaying.album}</strong>
+            <div className={styles.trackName}>{trackPlaying.title}</div>
+            <div className={styles.albumInfo}>
+              {trackPlaying.artist.join(', ')} - {trackPlaying.album}
+            </div>
           </div>
 
           <div className={styles.duration}>
             {utils.parseDuration(this.state.elapsed)} / {utils.parseDuration(trackPlaying.duration)}
           </div>
         </div>
+
         <div className={styles.playingBar__info__progress} ref={this.playingBar}>
           <div
             className={styles.progressTooltip}

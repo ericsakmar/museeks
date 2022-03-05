@@ -4,22 +4,22 @@
   "themeSource": "dark",
   "variables": {
     "--text": "#efefef",
-    "--background": "hsl(216, 20%, 7%)",
+    "--background": "#282c34",
     "--faded": "rgba(0, 0, 0, 0.8)",
 
-    "--border-color": "#0a0a0a",
+    "--border-color": "transparent",
     "--border-radius": "2px",
 
     "--header-color": "#efefef",
-    "--header-bg": "hsl(216, 20%, 11%)",
+    "--header-bg": "#202329",
 
-    "--footer-bg": "hsl(216, 20%, 11%)",
-    "--footer-nav-bg-color-active": "hsl(216, 20%, 7%)",
+    "--footer-bg": "#202329",
+    "--footer-nav-bg-color-active": "#181a1f",
 
-    "--tracks-bg-even": "hsl(216, 20%, 7%)",
-    "--tracks-bg-odd": "hsl(216, 20%, 10%)",
+    "--tracks-bg-even": "transparent",
+    "--tracks-bg-odd": "transparent",
 
-    "--tracks-header-bg": "hsl(216, 20%, 7%)",
+    "--tracks-header-bg": "transparent",
     "--tracks-header-color": "#efefef",
 
     "--success-color": "#5CB85C",
